@@ -46,7 +46,50 @@ function Index() {
     <>
       <div className="section section-cards bg-secondary">
         <Container>
-           
+          <h2 className="mb-5">
+            <span>Cards</span>
+          </h2>
+          <h3 className="h4 text-success font-weight-bold mb-4">Blog Cards</h3>
+          <Row>
+            <Col lg="4" md="6">
+              <BlogCard1 />
+              <BlogCard2 />
+              <BlogCard3 />
+            </Col>
+            <Col lg="4" md="6">
+              <BlogCard4 />
+              <BlogCard5 />
+              <BlogCard6 />
+            </Col>
+            <Col lg="4" md="6">
+              <BlogCard7 />
+              <BlogCard8 />
+              <BlogCard9 />
+            </Col>
+          </Row>
+          <h3 className="h4 text-success font-weight-bold mb-5 mt-5">
+            Profile Cards
+          </h3>
+          <Row>
+            <Col lg="4" md="6">
+              <ProfileCard1 />
+            </Col>
+            <Col lg="4" md="6">
+              <ProfileCard2 />
+            </Col>
+            <Col lg="4" md="6">
+              <ProfileCard3 />
+            </Col>
+            <Col lg="4" md="6">
+              <ProfileCard4 />
+            </Col>
+            <Col lg="4" md="6">
+              <ProfileCard5 />
+            </Col>
+            <Col lg="4" md="6">
+              <ProfileCard6 />
+            </Col>
+          </Row>
           <h3 className="h4 text-success font-weight-bold mb-5 mt-5">
             Full Background Cards
           </h3>
@@ -60,7 +103,30 @@ function Index() {
             <Col md="6">
               <FullBackgroundCard3 />
             </Col>
-          </Row>  
+          </Row>
+          <h3 className="h4 text-success font-weight-bold mb-5 mt-5">
+            Pricing Cards
+          </h3>
+          <Row>
+            <Col lg="4" md="6">
+              <PricingCard1 />
+            </Col>
+            <Col lg="4" md="6">
+              <PricingCard2 />
+            </Col>
+            <Col lg="4" md="6">
+              <PricingCard3 />
+            </Col>
+            <Col lg="4" md="6">
+              <PricingCard4 />
+            </Col>
+            <Col lg="4" md="6">
+              <PricingCard5 />
+            </Col>
+            <Col lg="4" md="6">
+              <PricingCard6 />
+            </Col>
+          </Row>
         </Container>
       </div>
     </>

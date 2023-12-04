@@ -103,7 +103,7 @@ function DemoNavbar(props) {
                   tag={NavLink}
                 >
                   <i className="ni ni-ui-04 d-lg-none"></i>
-                  <span className="nav-link-inner--text">Work</span>
+                  <span className="nav-link-inner--text">Elements</span>
                 </DropdownToggle>
                 <DropdownMenu className="dropdown-menu-xl">
                   <div className="dropdown-menu-inner">
@@ -166,7 +166,7 @@ function DemoNavbar(props) {
                   role="button"
                 >
                   <i className="ni ni-app d-lg-none"></i>
-                  <span className="nav-link-inner--text">Life</span>
+                  <span className="nav-link-inner--text">Design Blocks</span>
                 </DropdownToggle>
                 <DropdownMenu aria-labelledby="navbarDropdownMenuLink">
                   <DropdownItem tag={Link} to="/sections#headers">
@@ -220,7 +220,7 @@ function DemoNavbar(props) {
                   role="button"
                 >
                   <i className="ni ni-single-copy-04 d-lg-none"></i>
-                  <span className="nav-link-inner--text">Study</span>
+                  <span className="nav-link-inner--text">Examples</span>
                 </DropdownToggle>
                 <DropdownMenu aria-labelledby="navbarDropdownMenuLink">
                   <DropdownItem to="/about-us" tag={Link}>
@@ -278,7 +278,7 @@ function DemoNavbar(props) {
                   role="button"
                 >
                   <i className="ni ni-tablet-button d-lg-none"></i>
-                  <span className="nav-link-inner--text">Setting</span>
+                  <span className="nav-link-inner--text">App Pages</span>
                 </DropdownToggle>
                 <DropdownMenu aria-labelledby="navbarDropdownMenuLink">
                   <DropdownItem to="/account-settings" tag={Link}>
