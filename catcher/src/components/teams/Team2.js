@@ -21,7 +21,7 @@ function Team2() {
   return (
     <>
       <div className="team-2">
-        <Container>
+        <Container className="my-5">
           <Row>
             <Col className="mx-auto text-center mb-5" md="8">
               <h3 className="display-3">The Executive Team</h3>

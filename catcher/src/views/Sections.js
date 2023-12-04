@@ -32,10 +32,11 @@ function Sections() {
   });
   return (
     <>
-      <DemoNavbar type="dark" />
+      <DemoNavbar />
       <div className="wrapper">
         <NewsSection />
       </div>
+      <DemoFooter/>
     </>
   );
 }

@@ -94,6 +94,55 @@ function DemoNavbar(props) {
               className="navbar-nav-hover align-items-lg-center ml-lg-auto"
               navbar
             >
+            <UncontrolledDropdown nav>
+              <DropdownToggle
+                data-toggle="dropdown"
+                href="#pablo"
+                onClick={(e) => e.preventDefault()}
+                role="button"
+                tag={NavLink}
+              >
+                <i className="ni ni-ui-04 d-lg-none"></i>
+                <span className="nav-link-inner--text">Work</span>
+              </DropdownToggle>
+              <DropdownMenu className="dropdown-menu-xl">
+                <div className="dropdown-menu-inner">
+                  <Media
+                    className="d-flex align-items-center"
+                    to="/job-offer"
+                    tag={Link}
+                  >
+                    <div className="icon icon-shape bg-gradient-primary rounded-circle text-white">
+                      <i className="ni ni-spaceship"></i>
+                    </div>
+                    <Media body className="ml-3">
+                      <h6 className="heading text-primary mb-md-1">
+                        find job
+                      </h6>
+                      <p className="description d-none d-md-inline-block mb-0">
+                        
+                      </p>
+                    </Media>
+                  </Media>
+                  <Media
+                    className="d-flex align-items-center"
+                    to="/find-worker"
+                    tag={Link}
+                  >
+                    <div className="icon icon-shape bg-gradient-warning rounded-circle text-white">
+                      <i className="ni ni-palette"></i>
+                    </div>
+                    <Media body className="ml-3">
+                      <h6 className="heading text-primary mb-md-1">
+                        find worker
+                      </h6>
+                      <p className="description d-none d-md-inline-block mb-0">
+                      </p>
+                    </Media>
+                  </Media>
+                </div>
+              </DropdownMenu>
+            </UncontrolledDropdown>
               <UncontrolledDropdown nav>
                 <DropdownToggle
                   data-toggle="dropdown"
@@ -103,7 +152,7 @@ function DemoNavbar(props) {
                   tag={NavLink}
                 >
                   <i className="ni ni-ui-04 d-lg-none"></i>
-                  <span className="nav-link-inner--text">Work</span>
+                  <span className="nav-link-inner--text">Work222</span>
                 </DropdownToggle>
                 <DropdownMenu className="dropdown-menu-xl">
                   <div className="dropdown-menu-inner">
@@ -120,8 +169,7 @@ function DemoNavbar(props) {
                           find job
                         </h6>
                         <p className="description d-none d-md-inline-block mb-0">
-                          Learn how to use compiling Scss, change brand colors
-                          and more.
+                          
                         </p>
                       </Media>
                     </Media>
@@ -138,8 +186,6 @@ function DemoNavbar(props) {
                           find worker
                         </h6>
                         <p className="description d-none d-md-inline-block mb-0">
-                          Learn more about colors, typography, icons and the
-                          grid system we used for .
                         </p>
                       </Media>
                     </Media>
@@ -199,6 +245,10 @@ function DemoNavbar(props) {
                   <span className="nav-link-inner--text">Setting</span>
                 </DropdownToggle>
                 <DropdownMenu aria-labelledby="navbarDropdownMenuLink">
+                  <DropdownItem to="/register-page" tag={Link}>
+                    <i className="ni ni-chat-round text-primary"></i>
+                    Login
+                  </DropdownItem>
                   <DropdownItem to="/account-settings" tag={Link}>
                     <i className="ni ni-lock-circle-open text-muted"></i>
                     Account Settings

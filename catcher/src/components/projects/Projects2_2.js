@@ -17,12 +17,8 @@ import {
 function ProjectsSection() {
   return (
     <>
-      <div className="project-2">
+      <div className="project-2 my-5">
         <Container>
-          <Row>
-            <Col className="my-5" lg="8">
-            </Col>
-          </Row>
           <Row>
             <Col className="mx-auto text-center my-5" lg="8">
               <h3 className="display-3">Some of Our Awesome Products</h3>

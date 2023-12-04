@@ -29,6 +29,10 @@ import ProfilePage from "views/examples/ProfilePage.js";
 import RegisterPage from "views/examples/RegisterPage.js";
 import ResetPage from "views/examples/ResetPage.js";
 
+
+import JobOffer from "views/sevicheck/JobOffer.js";
+import FindWorker from "views/sevicheck/FindWorker.js";
+
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
 root.render(
@@ -55,7 +59,14 @@ root.render(
       <Route path="/profile-page" exact element={<ProfilePage />} />
       <Route path="/register-page" exact element={<RegisterPage />} />
       <Route path="/reset-page" exact element={<ResetPage />} />
+      {/* ///  custom*/}
+
+      <Route path="/job-offer" exact element={<JobOffer />} />
+      <Route path="/find-worker" exact element={<FindWorker />} />
+      
+      {/* custom */}
       <Route path="/" element={<Navigate to="/presentation" replace />} />
+
     </Routes>
   </BrowserRouter>
 );
