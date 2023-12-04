@@ -59,7 +59,7 @@ function Index() {
   });
   return (
     <>
-      <DemoNavbar type="transparent" />
+      <DemoNavbar type="primary" />
       <div className="wrapper">
         <Button
           className="btn-icon-only back-to-top show"
@@ -79,7 +79,7 @@ function Index() {
         <Cards />
         </Container >
       </div>
-      <DemoFooter />
+        <DemoFooter />
     </>
   );
 }

@@ -117,7 +117,7 @@ function DemoNavbar(props) {
                       </div>
                       <Media body className="ml-3">
                         <h6 className="heading text-primary mb-md-1">
-                          Elements
+                          find job
                         </h6>
                         <p className="description d-none d-md-inline-block mb-0">
                           Learn how to use compiling Scss, change brand colors
@@ -135,7 +135,7 @@ function DemoNavbar(props) {
                       </div>
                       <Media body className="ml-3">
                         <h6 className="heading text-primary mb-md-1">
-                          Presentation
+                          find worker
                         </h6>
                         <p className="description d-none d-md-inline-block mb-0">
                           Learn more about colors, typography, icons and the
@@ -143,17 +143,6 @@ function DemoNavbar(props) {
                         </p>
                       </Media>
                     </Media>
-                  </div>
-                  <div className="dropdown-menu-footer">
-                    <DropdownItem href="https://www.creative-tim.com/learning-lab/reactstrap/overview/argon-design-system">
-                      <i className="ni ni-atom"></i> Getting Started
-                    </DropdownItem>
-                    <DropdownItem href="https://www.creative-tim.com/learning-lab/reactstrap/colors/argon-design-system">
-                      <i className="ni ni-ui-04"></i> Foundation
-                    </DropdownItem>
-                    <DropdownItem href="https://www.creative-tim.com/learning-lab/reactstrap/core-accordions/argon-design-system">
-                      <i className="ni ni-archive-2"></i> Components
-                    </DropdownItem>
                   </div>
                 </DropdownMenu>
               </UncontrolledDropdown>
@@ -171,44 +160,9 @@ function DemoNavbar(props) {
                 <DropdownMenu aria-labelledby="navbarDropdownMenuLink">
                   <DropdownItem tag={Link} to="/sections#headers">
                     <i className="ni ni-album-2 text-info"></i>
-                    Headers
+                    community
                   </DropdownItem>
-                  <DropdownItem tag={Link} to="/sections#features">
-                    <i className="ni ni-settings text-danger"></i>
-                    Features
-                  </DropdownItem>
-                  <DropdownItem tag={Link} to="/sections#blogs">
-                    <i className="ni ni-align-left-2 text-primary"></i>
-                    Blogs
-                  </DropdownItem>
-                  <DropdownItem tag={Link} to="/sections#teams">
-                    <i className="ni ni-user-run text-danger"></i>
-                    Teams
-                  </DropdownItem>
-                  <DropdownItem tag={Link} to="/sections#projects">
-                    <i className="ni ni-paper-diploma text-purple"></i>
-                    Projects
-                  </DropdownItem>
-                  <DropdownItem tag={Link} to="/sections#pricing">
-                    <i className="ni ni-money-coins text-pink"></i>
-                    Pricing
-                  </DropdownItem>
-                  <DropdownItem tag={Link} to="/sections#testimonials">
-                    <i className="ni ni-chat-round text-muted"></i>
-                    Testimonials
-                  </DropdownItem>
-                  <DropdownItem tag={Link} to="/sections#contact-us">
-                    <i className="ni ni-mobile-button text-success"></i>
-                    Contact Us
-                  </DropdownItem>
-                  <DropdownItem tag={Link} to="/sections#tables">
-                    <i className="ni ni-chart-bar-32 text-default"></i>
-                    Tables
-                  </DropdownItem>
-                  <DropdownItem tag={Link} to="/sections#accordion">
-                    <i className="ni ni-collection text-yellow"></i>
-                    Accordion
-                  </DropdownItem>
+                  
                 </DropdownMenu>
               </UncontrolledDropdown>
               <UncontrolledDropdown nav>
@@ -225,47 +179,7 @@ function DemoNavbar(props) {
                 <DropdownMenu aria-labelledby="navbarDropdownMenuLink">
                   <DropdownItem to="/about-us" tag={Link}>
                     <i className="ni ni-tie-bow text-warning"></i>
-                    About-us
-                  </DropdownItem>
-                  <DropdownItem to="/blog-post" tag={Link}>
-                    <i className="ni ni-align-center text-info"></i>
-                    Blog Post
-                  </DropdownItem>
-                  <DropdownItem to="/blog-posts" tag={Link}>
-                    <i className="ni ni-chart-bar-32 text-yellow"></i>
-                    Blog Posts
-                  </DropdownItem>
-                  <DropdownItem to="/contact-us" tag={Link}>
-                    <i className="ni ni-square-pin text-danger"></i>
-                    Contact Us
-                  </DropdownItem>
-                  <DropdownItem to="/landing-page" tag={Link}>
-                    <i className="ni ni-planet text-purple"></i>
-                    Landing Page
-                  </DropdownItem>
-                  <DropdownItem to="/pricing-page" tag={Link}>
-                    <i className="ni ni-money-coins text-success"></i>
-                    Pricing
-                  </DropdownItem>
-                  <DropdownItem to="/ecommerce" tag={Link}>
-                    <i className="ni ni-box-2 text-pink"></i>
-                    Ecommerce Page
-                  </DropdownItem>
-                  <DropdownItem to="/product-page" tag={Link}>
-                    <i className="ni ni-bag-17 text-primary"></i>
-                    Product Page
-                  </DropdownItem>
-                  <DropdownItem to="/profile-page" tag={Link}>
-                    <i className="ni ni-circle-08 text-info"></i>
-                    Profile Page
-                  </DropdownItem>
-                  <DropdownItem to="/error" tag={Link}>
-                    <i className="ni ni-button-power text-warning"></i>
-                    404 Error Page
-                  </DropdownItem>
-                  <DropdownItem to="/error-500" tag={Link}>
-                    <i className="ni ni-ungroup text-yellow"></i>
-                    500 Error Page
+                    Korean Study
                   </DropdownItem>
                 </DropdownMenu>
               </UncontrolledDropdown>
@@ -285,29 +199,9 @@ function DemoNavbar(props) {
                     <i className="ni ni-lock-circle-open text-muted"></i>
                     Account Settings
                   </DropdownItem>
-                  <DropdownItem to="/login-page" tag={Link}>
-                    <i className="ni ni-tv-2 text-danger"></i>
-                    Login Page
-                  </DropdownItem>
-                  <DropdownItem to="/register-page" tag={Link}>
-                    <i className="ni ni-air-baloon text-pink"></i>
-                    Register Page
-                  </DropdownItem>
-                  <DropdownItem to="/reset-page" tag={Link}>
-                    <i className="ni ni-atom text-info"></i>
-                    Reset Page
-                  </DropdownItem>
-                  <DropdownItem to="/invoice-page" tag={Link}>
-                    <i className="ni ni-bullet-list-67 text-success"></i>
-                    Invoice Page
-                  </DropdownItem>
-                  <DropdownItem to="/checkout-page" tag={Link}>
-                    <i className="ni ni-basket text-orange"></i>
-                    Checkout Page
-                  </DropdownItem>
                   <DropdownItem to="/chat-page" tag={Link}>
                     <i className="ni ni-chat-round text-primary"></i>
-                    Chat Page
+                    Language
                   </DropdownItem>
                 </DropdownMenu>
               </UncontrolledDropdown>
