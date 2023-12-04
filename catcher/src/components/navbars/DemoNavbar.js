@@ -162,6 +162,10 @@ function DemoNavbar(props) {
                     <i className="ni ni-album-2 text-info"></i>
                     community
                   </DropdownItem>
+                  <DropdownItem tag={Link} to="/sections#headers">
+                    <i className="ni ni-chat-round text-info"></i>
+                    news
+                  </DropdownItem>
                   
                 </DropdownMenu>
               </UncontrolledDropdown>
