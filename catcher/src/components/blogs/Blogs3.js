@@ -7,7 +7,7 @@ function Blogs3() {
   return (
     <>
       <section className="blogs-3">
-        <Container>
+        <Container className="my-5">
           <Row>
             <Col className="mx-auto" lg="10" md="8">
               <h2 className="title mb-5">Related Stories</h2>

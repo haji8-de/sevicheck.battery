@@ -12,6 +12,7 @@ import DemoFooter from "components/footers/DemoFooter.js";
 // Section Components
  
 import Team2 from "components/teams/Team2.js";
+import Blogs3 from "components/blogs/Blogs3.js";
 
 function FindWorker() {
     React.useEffect(() => {
@@ -35,6 +36,8 @@ function FindWorker() {
     <>
       <DemoNavbar />
       <div className="cd-section" id="teams"> 
+
+        <Blogs3 />
         <Team2 />  
       </div>
       <DemoFooter/>

@@ -22,10 +22,12 @@ import {
 
 function DemoNavbar(props) {
   const [collapseOpen, toggleCollapse] = React.useState(false);
+  const [userName, setUserName] = React.useState("ASANA")
   React.useEffect(() => {
     let headroom = new Headroom(document.getElementById("dark-navbar-main"));
     // initialise
     headroom.init();
+    setUserName("test");
   });
   let navbarType = "";
   switch (props.type) {
@@ -103,6 +105,55 @@ function DemoNavbar(props) {
                 tag={NavLink}
               >
                 <i className="ni ni-ui-04 d-lg-none"></i>
+                <span className="nav-link-inner--text">template</span>
+              </DropdownToggle>
+              <DropdownMenu className="dropdown-menu-xl">
+                <div className="dropdown-menu-inner">
+                  <Media
+                    className="d-flex align-items-center"
+                    to="/index"
+                    tag={Link}
+                  >
+                    <div className="icon icon-shape bg-gradient-primary rounded-circle text-white">
+                      <i className="ni ni-spaceship"></i>
+                    </div>
+                    <Media body className="ml-3">
+                      <h6 className="heading text-primary mb-md-1">
+                      index
+                      </h6>
+                      <p className="description d-none d-md-inline-block mb-0">
+                        
+                      </p>
+                    </Media>
+                  </Media>
+                  <Media
+                    className="d-flex align-items-center"
+                    to="/presentation"
+                    tag={Link}
+                  >
+                    <div className="icon icon-shape bg-gradient-warning rounded-circle text-white">
+                      <i className="ni ni-palette"></i>
+                    </div>
+                    <Media body className="ml-3">
+                      <h6 className="heading text-primary mb-md-1">
+                      presentation
+                      </h6>
+                      <p className="description d-none d-md-inline-block mb-0">
+                      </p>
+                    </Media>
+                  </Media>
+                </div>
+              </DropdownMenu>
+            </UncontrolledDropdown>
+            <UncontrolledDropdown nav>
+              <DropdownToggle
+                data-toggle="dropdown"
+                href="#pablo"
+                onClick={(e) => e.preventDefault()}
+                role="button"
+                tag={NavLink}
+              >
+                <i className="ni ni-ui-04 d-lg-none"></i>
                 <span className="nav-link-inner--text">Work</span>
               </DropdownToggle>
               <DropdownMenu className="dropdown-menu-xl">
@@ -143,55 +194,6 @@ function DemoNavbar(props) {
                 </div>
               </DropdownMenu>
             </UncontrolledDropdown>
-              <UncontrolledDropdown nav>
-                <DropdownToggle
-                  data-toggle="dropdown"
-                  href="#pablo"
-                  onClick={(e) => e.preventDefault()}
-                  role="button"
-                  tag={NavLink}
-                >
-                  <i className="ni ni-ui-04 d-lg-none"></i>
-                  <span className="nav-link-inner--text">Work222</span>
-                </DropdownToggle>
-                <DropdownMenu className="dropdown-menu-xl">
-                  <div className="dropdown-menu-inner">
-                    <Media
-                      className="d-flex align-items-center"
-                      to="/index"
-                      tag={Link}
-                    >
-                      <div className="icon icon-shape bg-gradient-primary rounded-circle text-white">
-                        <i className="ni ni-spaceship"></i>
-                      </div>
-                      <Media body className="ml-3">
-                        <h6 className="heading text-primary mb-md-1">
-                          find job
-                        </h6>
-                        <p className="description d-none d-md-inline-block mb-0">
-                          
-                        </p>
-                      </Media>
-                    </Media>
-                    <Media
-                      className="d-flex align-items-center"
-                      to="/presentation"
-                      tag={Link}
-                    >
-                      <div className="icon icon-shape bg-gradient-warning rounded-circle text-white">
-                        <i className="ni ni-palette"></i>
-                      </div>
-                      <Media body className="ml-3">
-                        <h6 className="heading text-primary mb-md-1">
-                          find worker
-                        </h6>
-                        <p className="description d-none d-md-inline-block mb-0">
-                        </p>
-                      </Media>
-                    </Media>
-                  </div>
-                </DropdownMenu>
-              </UncontrolledDropdown>
               <UncontrolledDropdown nav>
                 <DropdownToggle
                   tag={NavLink}
@@ -241,6 +243,37 @@ function DemoNavbar(props) {
                   onClick={(e) => e.preventDefault()}
                   role="button"
                 >
+                  <img
+                    alt="..."
+                    className="img-fluid rounded-circle shadow"
+                    src={require("assets/img/faces/team-2.jpg")}
+                    style={{ width: "35px" }}
+                  ></img>
+                  <span className="nav-link-inner--text">{userName}</span>
+                </DropdownToggle>
+                <DropdownMenu aria-labelledby="navbarDropdownMenuLink">
+                  <DropdownItem to="/register-page" tag={Link}>
+                    <i className="ni ni-chat-round text-primary"></i>
+                    LogOut
+                  </DropdownItem>
+                  <DropdownItem to="/account-settings" tag={Link}>
+                    <i className="ni ni-lock-circle-open text-muted"></i>
+                    Account Settings
+                  </DropdownItem>
+                  <DropdownItem to="/chat-page" tag={Link}>
+                    <i className="ni ni-chat-round text-primary"></i>
+                    Language
+                  </DropdownItem>
+                </DropdownMenu>
+              </UncontrolledDropdown>
+              <UncontrolledDropdown nav>
+                <DropdownToggle
+                  tag={NavLink}
+                  data-toggle="dropdown"
+                  href="#pablo"
+                  onClick={(e) => e.preventDefault()}
+                  role="button"
+                >
                   <i className="ni ni-tablet-button d-lg-none"></i>
                   <span className="nav-link-inner--text">Setting</span>
                 </DropdownToggle>
@@ -248,10 +281,6 @@ function DemoNavbar(props) {
                   <DropdownItem to="/register-page" tag={Link}>
                     <i className="ni ni-chat-round text-primary"></i>
                     Login
-                  </DropdownItem>
-                  <DropdownItem to="/account-settings" tag={Link}>
-                    <i className="ni ni-lock-circle-open text-muted"></i>
-                    Account Settings
                   </DropdownItem>
                   <DropdownItem to="/chat-page" tag={Link}>
                     <i className="ni ni-chat-round text-primary"></i>
