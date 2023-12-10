@@ -38,6 +38,7 @@ const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <BrowserRouter>
     <Routes>
+      <Route path="/web" exact element={<Index />} />
       <Route path="/index" exact element={<Index />} />
       <Route path="/sections/*" exact element={<Sections />} />
       <Route path="/presentation" exact element={<Presentation />} />
