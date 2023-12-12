@@ -1,6 +1,6 @@
 {
-  "name": "argon-design-system-pro-react",
-  "version": "1.0.2",
+  "name": "catcher",
+  "version": "1.0.1",
   "private": true,
   "dependencies": {
     "@fortawesome/fontawesome-free": "6.4.0",
