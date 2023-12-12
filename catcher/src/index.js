@@ -36,7 +36,7 @@ import FindWorker from "views/sevicheck/FindWorker.js";
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
 root.render(
-  <BrowserRouter>
+  <BrowserRouter basename="/web">
     <Routes>
       <Route path="/web" exact element={<Index />} />
       <Route path="/index" exact element={<Index />} />
