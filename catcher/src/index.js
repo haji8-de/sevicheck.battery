@@ -66,7 +66,7 @@ root.render(
       <Route path="/find-worker" exact element={<FindWorker />} />
       
       {/* custom */}
-      <Route path="/" element={<Navigate to="/presentation" replace />} />
+      <Route path="/" element={<Navigate to="/login-page" replace />} />
 
     </Routes>
   </BrowserRouter>
