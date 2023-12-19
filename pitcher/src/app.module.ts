@@ -7,6 +7,7 @@ import { join } from 'path';
 import { TodoModule } from './todo/todo.module';
 import { PrismaModule } from './prisma/prisma.module';
 import { PrismaService } from './prisma/prisma.service';
+import { UserModule } from './user/user.module';
 
 @Module({
   imports: [
@@ -18,11 +19,12 @@ import { PrismaService } from './prisma/prisma.service';
       sortSchema:true
     }),
     TodoModule,
-    PrismaModule
+    PrismaModule,
+    UserModule
 
   ],
   providers: [PrismaService],
-  //controllers: [AppController],
+  controllers: [], // AppController
   //providers: [AppService],
 })
 export class AppModule {

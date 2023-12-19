@@ -7,15 +7,24 @@ input CreateTodoInput {
   title: String!
 }
 
+input CreateUserInput {
+  """Example field (placeholder)"""
+  exampleField: Int!
+}
+
 type Mutation {
   createTodo(createTodoInput: CreateTodoInput!): Todo!
+  createUser(createUserInput: CreateUserInput!): User!
   removeTodo(id: Int!): Todo!
+  removeUser(id: Int!): User!
   updateTodo(updateTodoInput: UpdateTodoInput!): Todo!
+  updateUser(updateUserInput: UpdateUserInput!): User!
 }
 
 type Query {
   todo(id: Int!): Todo!
   todos: [Todo!]!
+  user(id: Int!): User!
 }
 
 type Todo {
@@ -28,4 +37,15 @@ input UpdateTodoInput {
   desc: String
   id: Int!
   title: String!
+}
+
+input UpdateUserInput {
+  """Example field (placeholder)"""
+  exampleField: Int
+  id: Int!
+}
+
+type User {
+  """Example field (placeholder)"""
+  exampleField: Int!
 }
