@@ -4,7 +4,7 @@ import { SignUpInput } from './dto/signup-input';
 
 @Injectable()
 export class AuthService {
-  create(serviceignUpInput: SignUpInput) {
+  create(signUpInput: SignUpInput) {
     return 'This action adds a new auth';
   }
 
