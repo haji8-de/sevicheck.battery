@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 
 // reactstrap components
 import {
@@ -10,11 +10,13 @@ import {
   InputGroupText,
   InputGroup,
   Container,
+  Label,
 } from "reactstrap";
 
 // Core Components
 import DemoNavbar from "components/navbars/DemoNavbar.js";
 import DemoFooter from "components/footers/DemoFooter.js";
+import { Controller, useForm } from "react-hook-form";
 
 function RegisterPage() {
   const [activeContainer, setActiveContainer] = React.useState("");
@@ -23,6 +25,43 @@ function RegisterPage() {
   const [signupPasswordFocus, setSignupPasswordFocus] = React.useState("");
   const [signinEmailFocus, setSigninEmailFocus] = React.useState("");
   const [signinPasswordFocus, setSigninPasswordFocus] = React.useState("");
+  const { register, control,  handleSubmit, formState: { errors } } = useForm({
+    defaultValues: {
+      name: '',
+      email: '',
+      password: ''
+    }
+  });
+  const registerOptions = {
+    name: { required: "Name is required",
+      minLength: {
+        value: 5,
+        message: "Name must have at least 5 characters"
+      } },
+    email: { required: " is required" ,
+      minLength: {
+        value: 10,
+        message: "Email must have at least 10 characters"
+      }},
+    password: {
+      required: "Password is required",
+      minLength: {
+        value: 8,
+        message: "Password must have at least 8 characters"
+      }
+    }
+  };
+ // const onSubmit = (data) => alert(JSON.stringify(data));
+  const onFormSubmit  = data => {
+    console.log(data)
+    console.log("test")
+  };
+
+  const onErrors = errors => {
+    console.error(errors)
+    console.log("test2")
+  };
+  
   React.useEffect(() => {
     document.body.classList.add("register-page");
     window.scrollTo(0, 0);
@@ -45,7 +84,7 @@ function RegisterPage() {
           ></div>
           <Container className={activeContainer}>
             <div className="form-container sign-up-container">
-              <Form>
+              <Form onSubmit={handleSubmit(onFormSubmit, onErrors)}>
                 <h2>Create Account</h2>
                 <div className="social-container">
                   <Button color="facebook" size="sm" type="button">
@@ -53,33 +92,35 @@ function RegisterPage() {
                       <i className="fab fa-facebook"></i>
                     </span>
                   </Button>
-                  <Button color="instagram" size="sm" type="button">
-                    <span className="btn-inner--icon">
-                      <i className="fab fa-instagram"></i>
-                    </span>
-                  </Button>
-                  <Button color="twitter" size="sm" type="button">
-                    <span className="btn-inner--icon">
-                      <i className="fab fa-twitter"></i>
-                    </span>
-                  </Button>
                 </div>
                 <span className="text-default mb-4">
                   or use your email for registration
                 </span>
                 <FormGroup className={"mb-3 " + signupNameFocus}>
+
                   <InputGroup className="input-group-alternative">
                     <InputGroupAddon addonType="prepend">
                       <InputGroupText>
                         <i className="ni ni-circle-08"></i>
                       </InputGroupText>
                     </InputGroupAddon>
-                    <Input
-                      placeholder="Name"
-                      type="text"
-                      onFocus={() => setSignupNameFocus("focused")}
-                      onBlur={() => setSignupNameFocus("")}
-                    ></Input>
+
+                   
+                     <Controller
+                        control={control}
+                        name="name"
+                        render={({ field: { ref, ...fieldProps } }) => (
+                            <Input id="Name" 
+                            placeholder="Name"
+                            type="text"
+                            innerRef={ref} {...fieldProps} 
+                            onFocus={() => setSignupNameFocus("focused")}
+                            onBlur={() => setSignupNameFocus("")}/>
+                        )}
+                      />
+                    <small className="text-danger">
+                      {errors?.name && errors.name.message}
+                    </small>
                   </InputGroup>
                 </FormGroup>
                 <FormGroup className={"mb-3 " + signupEmailFocus}>
@@ -89,12 +130,22 @@ function RegisterPage() {
                         <i className="ni ni-email-83"></i>
                       </InputGroupText>
                     </InputGroupAddon>
-                    <Input
-                      placeholder="Email"
-                      type="email"
-                      onFocus={() => setSignupEmailFocus("focused")}
-                      onBlur={() => setSignupEmailFocus("")}
-                    ></Input>
+
+                    <Controller
+                        control={control}
+                        name="email"
+                        render={({ field: { ref, ...fieldProps } }) => (
+                            <Input 
+                            placeholder="Email"
+                            type="email"
+                            id="Email" innerRef={ref} {...fieldProps} 
+                            onFocus={() => setSignupEmailFocus("focused")}
+                            onBlur={() => setSignupEmailFocus("")}/>
+                        )}
+                      />
+                    <small className="text-danger">
+                      {errors?.email && errors.email.message}
+                    </small>
                   </InputGroup>
                 </FormGroup>
                 <FormGroup className={signupPasswordFocus}>
@@ -104,15 +155,25 @@ function RegisterPage() {
                         <i className="ni ni-lock-circle-open"></i>
                       </InputGroupText>
                     </InputGroupAddon>
-                    <Input
-                      placeholder="Password"
-                      type="password"
-                      onFocus={() => setSignupPasswordFocus("focused")}
-                      onBlur={() => setSignupPasswordFocus("")}
-                    ></Input>
+                    <Controller
+                        control={control}
+                        name="password"
+                        render={({ field: { ref, ...fieldProps } }) => (
+                            <Input 
+                            placeholder="Password"
+                            type="password"
+                            id="Password" 
+                            innerRef={ref} {...fieldProps} 
+                            onFocus={() => setSignupEmailFocus("focused")}
+                            onBlur={() => setSignupEmailFocus("")}/>
+                        )}
+                      />
+                    <small className="text-danger">
+                      {errors?.password && errors.password.message}
+                    </small>
                   </InputGroup>
                 </FormGroup>
-                <Button color="primary">Sign Up</Button>
+                <Button  type="submit" color="primary">Sign Up</Button>
               </Form>
             </div>
             <div className="form-container sign-in-container">
