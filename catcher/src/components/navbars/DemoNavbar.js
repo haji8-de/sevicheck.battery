@@ -20,15 +20,27 @@ import {
   Col,
 } from "reactstrap";
 
+import useGeneralStore from "stores/generalStore.js"
+
 function DemoNavbar(props) {
   const [collapseOpen, toggleCollapse] = React.useState(false);
   const [userName, setUserName] = React.useState("ASANA")
+  // const [login, setLogin] = React.useState(false)
+
+  const { logout, username, isLoginOpen, setLoginIsOpen } = useGeneralStore()
   React.useEffect(() => {
     let headroom = new Headroom(document.getElementById("dark-navbar-main"));
     // initialise
+    setUserName(username);
     headroom.init();
-    setUserName("test");
   });
+  
+  const logout_2 = (e) => 
+  {
+    logout();
+    setLoginIsOpen(false);
+    //localStorage.clear();
+  }
   let navbarType = "";
   switch (props.type) {
     case "dark":
@@ -236,12 +248,14 @@ function DemoNavbar(props) {
                 </DropdownMenu>
               </UncontrolledDropdown>
               <UncontrolledDropdown nav>
+                login{isLoginOpen}.
                 <DropdownToggle
                   tag={NavLink}
                   data-toggle="dropdown"
                   href="#pablo"
                   onClick={(e) => e.preventDefault()}
                   role="button"
+                  hidden={!isLoginOpen}
                 >
                   <img
                     alt="..."
@@ -252,7 +266,8 @@ function DemoNavbar(props) {
                   <span className="nav-link-inner--text">{userName}</span>
                 </DropdownToggle>
                 <DropdownMenu aria-labelledby="navbarDropdownMenuLink">
-                  <DropdownItem to="/register-page" tag={Link}>
+                  <DropdownItem to="/register-page" tag={Link} 
+                      onClick={(e) => logout(e)}>
                     <i className="ni ni-chat-round text-primary"></i>
                     LogOut
                   </DropdownItem>
@@ -267,13 +282,16 @@ function DemoNavbar(props) {
                 </DropdownMenu>
               </UncontrolledDropdown>
               <UncontrolledDropdown nav>
+                login {isLoginOpen}.
                 <DropdownToggle
                   tag={NavLink}
                   data-toggle="dropdown"
                   href="#pablo"
                   onClick={(e) => e.preventDefault()}
                   role="button"
+                  hidden={isLoginOpen}
                 >
+                  
                   <i className="ni ni-tablet-button d-lg-none"></i>
                   <span className="nav-link-inner--text">Setting</span>
                 </DropdownToggle>

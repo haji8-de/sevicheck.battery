@@ -38,9 +38,21 @@ import TooltipsPopovers from "components/index-page/TooltipsPopovers.js";
 import FileUpload from "components/index-page/FileUpload.js";
 import Carousel from "components/index-page/Carousel.js";
 import NucleoIcons from "components/index-page/NucleoIcons.js";
+import useGeneralStore from "stores/generalStore.js"
+import { useNavigate} from "react-router-dom";
+
 
 function Index() {
+
+  const navigate = useNavigate();
+  const { isLoginOpen, setLoginIsOpen,  setUser, logout, clear,
+    general_count, increasePopulation,   
+    username, email } = useGeneralStore();
+
   React.useEffect(() => {
+    if(!isLoginOpen){
+      navigate('/register-page');
+    }
     document.body.classList.add("index-page");
     window.scrollTo(0, 0);
     document.body.scrollTop = 0;
@@ -57,9 +69,30 @@ function Index() {
       document.body.classList.remove("index-page");
     };
   });
+
+  function Counter () {
+    return (
+      <div>
+        <span>{general_count}</span>
+        <button onClick={increasePopulation}>one up</button>
+        <button onClick={clear}>clear</button>
+        <spen>username/{username};</spen>
+        <spen>email/{email};</spen>
+        <spen>login/{isLoginOpen};</spen>
+      </div>
+    )
+  }
+
   return (
     <>
       <DemoNavbar type="primary" />
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <Counter />
+      tetstfsf
       <div className="wrapper">
         <Button
           className="btn-icon-only back-to-top show"
