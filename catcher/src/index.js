@@ -66,7 +66,8 @@ root.render(
     <meta charSet="utf-8"></meta>
   </head>
   <ApolloProvider client={client}>
-    <BrowserRouter basename="/web">
+    <BrowserRouter >
+    {/* basename="/web"> */}
       <Routes>
         <Route path="/error" exact element={<Error />} />
         <Route path="/index" exact element={<Index />} />
@@ -97,7 +98,7 @@ root.render(
         
        
         {/* custom */}
-        <Route path="/" element={<Navigate to="/register-page" replace />} />
+        <Route path="/" element={<Navigate to="" replace />} />
 
       </Routes>
     </BrowserRouter>

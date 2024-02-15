@@ -252,8 +252,7 @@ function DisplayLocations() {
       <br/>
       <br/>
       <br/>
-      <Counter />
-      tetstfsf
+      {/* <Counter /> */}
       <div className="wrapper">
         <div className="page-header bg-default">
           <div

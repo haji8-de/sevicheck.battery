@@ -248,7 +248,6 @@ function DemoNavbar(props) {
                 </DropdownMenu>
               </UncontrolledDropdown>
               <UncontrolledDropdown nav>
-                login{isLoginOpen}.
                 <DropdownToggle
                   tag={NavLink}
                   data-toggle="dropdown"
@@ -282,7 +281,6 @@ function DemoNavbar(props) {
                 </DropdownMenu>
               </UncontrolledDropdown>
               <UncontrolledDropdown nav>
-                login {isLoginOpen}.
                 <DropdownToggle
                   tag={NavLink}
                   data-toggle="dropdown"

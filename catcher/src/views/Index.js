@@ -91,8 +91,7 @@ function Index() {
       <br/>
       <br/>
       <br/>
-      <Counter />
-      tetstfsf
+      {/* <Counter /> */}
       <div className="wrapper">
         <Button
           className="btn-icon-only back-to-top show"

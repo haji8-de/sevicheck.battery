@@ -38,7 +38,7 @@ const useGeneralStore = create((set) => (
   increasePopulation: () => set((state) => ({
       general_count: state.general_count + 1 ,
       isLoginOpen : !(state.isLoginOpen),
-     accessToken:"ace"+ state.general_count,
+     accessToken:"ace" + state.general_count,
      refreshToken:"ref",
      email: "test@co.co",
      username: "test"
@@ -47,10 +47,10 @@ const useGeneralStore = create((set) => (
 
   //inc: () => set((state) => ({ general_count: state.general_count + 1 })),
 }),
-// {
-//     name: 'general-store', // 저장소 key값
-//     // storage: createJSONStorage(() => localStorage), // 저장소
-//     version: 1.0, // version 정보
-//})
+{
+    name: 'general-store', // 저장소 key값
+    //storage: createJSONStorage(() => localStorage), // 저장소
+    version: 1.0, // version 정보
+}
 )
 export default useGeneralStore
