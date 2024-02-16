@@ -34,23 +34,12 @@ import ProfilePage from "views/examples/ProfilePage.js";
 import RegisterPage from "views/examples/RegisterPage.js";
 import ResetPage from "views/examples/ResetPage.js";
 
-
 import JobOffer from "views/sevicheck/JobOffer.js";
 import FindWorker from "views/sevicheck/FindWorker.js";
-
-// import { loadErrorMessages, loadDevMessages } from "@apollo/client/dev"
-
-// loadErrorMessages()
-// loadDevMessages()
 
 import client from "./apollo.js"
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
-// const client = new ApolloClient({
-//   uri: "http://localhost:3000/graphql",
-//   // uri: 'https://flyby-router-demo.herokuapp.com/',
-//   cache: new InMemoryCache(),
-// });
 const HELLO = gql`
   query Hello{hello}
 `;

@@ -7,7 +7,7 @@ loadErrorMessages()
 loadDevMessages()
 
 const httpLink = new HttpLink({
-    uri: "http://localhost:3000/graphql"
+    uri: "http://thehaji.co/db/graphql"
   });
   
   const errorLink = onError(({ graphQLErrors, networkError }) => {
@@ -21,7 +21,7 @@ const httpLink = new HttpLink({
     if (networkError) console.log(`[Network error]: ${networkError}`);
   });
 const client = new ApolloClient({
-    uri: "http://localhost:3000/graphql",
+    uri: "http://thehaji.co/db/graphql",
     // uri: 'https://flyby-router-demo.herokuapp.com/',
     cache: new InMemoryCache(),
     credentials: "include",
