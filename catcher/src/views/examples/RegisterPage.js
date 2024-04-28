@@ -113,7 +113,7 @@ function DisplayLocations() {
     const {
       signup: { accessToken,  refreshToken, user},
     } = data;
-
+    localStorage.setItem('authToken', accessToken)
     setLoginIsOpen(true);
     setUser({
       accessToken: accessToken,
@@ -134,6 +134,8 @@ function DisplayLocations() {
       signin: { accessToken,  refreshToken, user},
     } = data;
     setLoginIsOpen(true);
+    
+    localStorage.setItem("authToken", accessToken)
     setUser({
       accessToken: accessToken,
       refreshToken: refreshToken,
